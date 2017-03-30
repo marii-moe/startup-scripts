@@ -10,7 +10,7 @@ sudo apt update
 sudo apt install -y git 
 git config -g "user.name=marii"
 git config -g "user.email=marii@marii.moe"
-git config
+git config -g push.default simple
 git clone "https://github.com/marii-moe/startup-scripts.git"
 cd 'startup-scripts'
 chmod 755 'setup.sh'
