@@ -1,3 +1,4 @@
-source "~/.marii_conf/x.auth"
+home_directory="$(realpath ~)"
+source "$home_directory/.marii_conf/auth/marii_auth"
 ssh "$tsundere_user@$tsundere_url" -L 3000:localhost:3000 -p 24 -N &
 mosh "$tsundere_user@$tsundere_url" --ssh="ssh -p 24" -p 60001
