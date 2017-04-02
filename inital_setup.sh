@@ -8,7 +8,7 @@ function git_install {
     git config --global push.default "simple"
     cd /opt
     if [ ! -d 'startup-scripts' ]; then
-	sudo git clone "https://github.com/marii-moe/startup-scripts.git"
+	sudo git clone "ssh:git@//github.com/marii-moe/startup-scripts.git"
     fi
     sudo chown ubuntu:ubuntu -R startup-scripts
     popd
