@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-repo_path="/opt/startup-scripts"
+repo_path="/opt/projects/startup-scripts"
 bash "$repo_path/add-repositories.sh"
 bash "$repo_path/basic_tools.sh"
 bash "$repo_path/docker-setup.sh"

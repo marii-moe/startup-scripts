@@ -7,10 +7,12 @@ function git_install {
     git config --global "user.email" "marii@marii.moe"
     git config --global push.default "simple"
     cd /opt
+    sudo mkdir projects
+    sudo chown ubuntu:ubuntu -R projects
+    cd projects
     if [ ! -d 'startup-scripts' ]; then
-	sudo git clone "ssh:git@//github.com/marii-moe/startup-scripts.git"
+	git clone "ssh://git@github.com/marii-moe/startup-scripts.git"
     fi
-    sudo chown ubuntu:ubuntu -R startup-scripts
     popd
 }
 
@@ -22,5 +24,5 @@ pushd .
 mkdir -p "$home_directory/.marii_conf/auth"
 cp "$auth_file" "$home_directory/.marii_conf/auth/marii_auth"
 git_install
-bash '/opt/startup-scripts/setup.sh'
+bash '/opt/projects/startup-scripts/setup.sh'
 popd
