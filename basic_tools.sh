@@ -1,2 +1,2 @@
 sudo apt update
-sudo apt install -y mosh emacs htop
+sudo apt install -y mosh emacs htop tmux
